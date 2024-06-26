@@ -1,0 +1,27 @@
+import sys
+from time import sleep
+import time 
+
+def print_lyrics():
+    lines = [
+        ("For how it seemed", 0.0),
+        ("I should've stayed and let you be", 0.0),
+        ("Run into my heart so carelessly", 0.0),
+        ("That's the reason I'm afraid", 0.0),
+        ("You're the thought that can't be tamed", 0.0),
+        ("And I'm trying to be sane", 0.0),
+        ("And I'm trying to be sane", 0.0),
+        ("And I'm trying to be sane", 0.0)
+    ]
+
+    delays = [0, 0, 0, 0, 0, 0, 0, 0]  # Placeholder delays, bisa diubah
+
+    for i, (line, char_delay) in enumerate(lines):
+        for char in line:
+            print(char, end='')
+            sys.stdout.flush()
+            sleep(char_delay)
+        time.sleep(delays[i])
+        print('')
+
+print_lyrics()
